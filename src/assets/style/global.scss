@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  $scrollRound : 1px;
+  $scrollWidth : 6px;
+  $scrollHeight: 10px;
+  $scrollBG_track : #6e829c;
+  $scrollBG_thumb : #061d31;
+  $scrollColor : #26384c #452d6b;
+
+  box-sizing: border-box;
+  scrollbar-width: $scrollWidth;
+  scrollbar-color: $scrollColor;
+
+  &::-webkit-scrollbar {
+    width: $scrollWidth;
+    height: $scrollHeight;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $scrollBG_track;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: $scrollRound;
+    background-color: $scrollBG_thumb;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.MuiList-root {
+  padding: unset !important;
+}
+
+.default-input {
+  outline: none;
+  border-radius: 5px;
+  background-color: unset;
+
+  // input number increase hide
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  -moz-appearance: textfield;
+}
+
+.overflow-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
