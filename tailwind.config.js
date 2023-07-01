@@ -16,6 +16,9 @@ const maxFont = 80;
 const minPixel = 0;
 const maxPixel = 1500;
 
+const minFontWeight = 100;
+const maxFontWeight = 1000;
+
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}"
@@ -23,90 +26,89 @@ module.exports = {
 
   theme: {
     screens: {
-      sx: '350px',
+      '2xs': '320px',
+      xs: '375px',
       sm: '600px',
-      md: '900px',
-      lg: '1200px',
-      xl: '1536px',
-
-      mobile: '600px',
-      laptop: '900px',
-      desktop: '1200px',
+      md: '840px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
     },
 
     extend: {
       colors: {
-        black: '#000000',
-        white: '#ffffff',
-        unset: '#00000000',
-
-        baseBg: '#2B2B2B',
-        comBg: '#3B3B3B',
-        btnBg: '#A259FF',
+        primary: '#2B2B2B',
+        second: '#3B3B3B',
+        third: '#858584',
+        purple: '#A259FF'
       },
+    },
+
+    fontWeight: {
+      ...range(minFontWeight, maxFontWeight).reduce((merged, f) => ({ ...merged, [f]: `${f}px` }), {})
     },
 
     fontSize: {
       ...range(minFont, maxFont).reduce((merged, f) => (
-        { ...merged, [f]: `${f}px !important` }
+          { ...merged, [f]: `${f}px` }
       ), {}),
 
       ...range1(0.5, 5, 10).reduce((merged, f) => (
-        { ...merged, [f + 'r']: `${f}rem !important` }
+          { ...merged, [f + 'r']: `${f}rem` }
       ), {})
     },
 
     spacing: {
       ...range(minPixel, maxPixel).reduce((merged, f) => (
-        { ...merged, [f]: `${f}px !important` }
+          { ...merged, [f]: `${f}px` }
       ), {}),
 
       ...range(1, 100).reduce((merged, f) => (
-        { ...merged, [f + 'vw']: `${f}vw !important` }
+          { ...merged, [f + 'vw']: `${f}vw` }
       ), {}),
 
       ...range(1, 100).reduce((merged, f) => (
-        { ...merged, [f + 'vh']: `${f}vh !important` }
+          { ...merged, [f + 'vh']: `${f}vh` }
       ), {})
     },
 
     maxWidth: {
       ...range(minPixel, maxPixel).reduce((merged, f) => (
-        { ...merged, [f]: `${f}px !important` }
+          { ...merged, [f]: `${f}px` }
       ), {}),
 
       ...range(1, 100).reduce((merged, f) => (
-        { ...merged, [f + 'vw']: `${f}vw !important` }
+          { ...merged, [f + 'vw']: `${f}vw` }
       ), {}),
     },
 
     minWidth: {
       ...range(minPixel, maxPixel).reduce((merged, f) => (
-        { ...merged, [f]: `${f}px !important` }
+          { ...merged, [f]: `${f}px` }
       ), {}),
 
       ...range(1, 100).reduce((merged, f) => (
-        { ...merged, [f + 'vw']: `${f}vw !important` }
+          { ...merged, [f + 'vw']: `${f}vw` }
       ), {}),
     },
 
     maxHeight: {
       ...range(minPixel, maxPixel).reduce((merged, f) => (
-        { ...merged, [f]: `${f}px !important` }
+          { ...merged, [f]: `${f}px` }
       ), {}),
 
       ...range(1, 100).reduce((merged, f) => (
-        { ...merged, [f + 'vh']: `${f}vh !important` }
+          { ...merged, [f + 'vh']: `${f}vh` }
       ), {})
     },
 
     minHeight: {
       ...range(minPixel, maxPixel).reduce((merged, f) => (
-        { ...merged, [f]: `${f}px !important` }
+          { ...merged, [f]: `${f}px` }
       ), {}),
 
       ...range(1, 100).reduce((merged, f) => (
-        { ...merged, [f + 'vh']: `${f}vh !important` }
+          { ...merged, [f + 'vh']: `${f}vh` }
       ), {})
     },
   },
