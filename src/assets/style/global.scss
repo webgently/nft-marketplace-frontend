@@ -2,13 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'WorkSans';
+  src: url('../fonts/WorkSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'SpaceMono';
+  src: url('../fonts/SpaceMono-Regular.ttf');
+}
+
 * {
-  $scrollRound : 1px;
-  $scrollWidth : 6px;
-  $scrollHeight: 10px;
-  $scrollBG_track : #6e829c;
-  $scrollBG_thumb : #061d31;
-  $scrollColor : #26384c #452d6b;
+  $scrollRound : 10px;
+  $scrollWidth : 4px;
+  $scrollHeight: 4px;
+  $scrollBG_track : #858584;
+  $scrollBG_thumb : #A259FF;
+  $scrollColor : #26384c #A259FF;
 
   box-sizing: border-box;
   scrollbar-width: $scrollWidth;
@@ -33,7 +43,7 @@ html,
 body {
   margin: 0;
   font-size: 15px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'WorkSans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
