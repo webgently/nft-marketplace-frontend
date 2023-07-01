@@ -29,7 +29,7 @@ const Header = () => {
     };
     setResponsiveness();
     const setScrollEventY = () => {
-      getScrollPosition() > 300 ? setScrollEvent(true) : setScrollEvent(false);
+      getScrollPosition() > 50 ? setScrollEvent(true) : setScrollEvent(false);
     };
     setScrollEventY();
     window.addEventListener('scroll', setScrollEventY);
