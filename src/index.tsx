@@ -1,19 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
-import './assets/style/global.scss';
+import ScrollToTop from 'react-scroll-to-top';
 import { Routers } from './routers';
 import { Provider } from './provider';
 import reportWebVitals from './reportWebVitals';
+import './assets/style/global.scss';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
   <React.StrictMode>
     <Provider>
       <Routers />
+      <ScrollToTop
+        smooth
+        color="#A259FF"
+        width="24"
+        height="24"
+        className="rounded-full flex justify-center items-center w-[50px] h-[50px]"
+      />
     </Provider>
   </React.StrictMode>
 );
