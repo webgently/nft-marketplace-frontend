@@ -1,0 +1,28 @@
+header {
+  @apply flex justify-between gap-[20px] py-[20px] px-[14px] xs:px-[20px] sm:px-[30px] md:px-[20px] lg:px-[40px] xl:px-[50px];
+  .logo-container {
+    @apply flex items-center gap-[12px];
+    h2 {
+      font-family: SpaceMono;
+      @apply text-[14px] 3xs:text-[16px] 2xs:text-[18px] xs:text-[22px] font-[700];
+    }
+  }
+  .navbar-group {
+    @apply flex items-center gap-[8px] lg:gap-[10px] text-white text-[16px] font-[600];
+    ._active {
+      @apply text-purple font-[600];
+    }
+    a {
+      @apply md:px-[8px] lg:px-[14px] xl:px-[20px] whitespace-nowrap;
+      &:hover {
+        @apply text-purple font-[600];
+      }
+    }
+    button {
+      @apply flex justify-center items-center gap-[12px] p-[12px_20px] lg:p-[14px_30px] rounded-[20px] bg-purple font-[400] whitespace-nowrap;
+      &:hover {
+        @apply font-[600];
+      }
+    }
+  }
+}
