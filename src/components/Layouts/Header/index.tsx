@@ -8,9 +8,12 @@ import './header.scss';
 const Header = () => {
   /* common variable */
   const location = useLocation();
+  const [scrollEvent, setScrollEvent] = React.useState(false);
 
   const [mobile, setMobile] = React.useState(false);
   const [menuOpen, setMenuOpen] = React.useState(false);
+
+  const getScrollPosition = () => window.scrollY;
   const getWidth = () => {
     return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
   };
@@ -25,13 +28,22 @@ const Header = () => {
       }
     };
     setResponsiveness();
+    const setScrollEventY = () => {
+      getScrollPosition() > 300 ? setScrollEvent(true) : setScrollEvent(false);
+    };
+    setScrollEventY();
+    window.addEventListener('scroll', setScrollEventY);
     window.addEventListener('resize', setResponsiveness);
+    return () => {
+      window.removeEventListener('resize', setResponsiveness);
+      window.removeEventListener('scroll', setScrollEventY);
+    };
     // eslint-disable-next-line
   }, []);
 
   return (
     <>
-      <header>
+      <header className={scrollEvent ? 'header-container' : ''}>
         <div className="logo-container">
           <IconMenu icon="Logo" size={32} className="text-purple" />
           <h2>NFT Marketplace</h2>

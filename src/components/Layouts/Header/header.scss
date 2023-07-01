@@ -1,5 +1,5 @@
 header {
-  @apply flex justify-between gap-[20px] py-[20px] px-[14px] xs:px-[20px] sm:px-[30px] md:px-[20px] lg:px-[40px] xl:px-[50px];
+  @apply flex justify-between gap-[20px] fixed w-full py-[20px] px-[14px] xs:px-[20px] sm:px-[30px] md:px-[20px] lg:px-[40px] xl:px-[50px];
   .logo-container {
     @apply flex items-center gap-[12px];
     h2 {
@@ -25,4 +25,8 @@ header {
       }
     }
   }
+}
+
+.header-container {
+  @apply bg-third/[0.3] border-b-[1px] border-third py-[14px] transition-all duration-[0.5];
 }
