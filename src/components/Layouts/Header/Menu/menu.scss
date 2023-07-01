@@ -1,0 +1,47 @@
+menu {
+  @apply bg-black opacity-[0.95] h-full w-[280px] xs:w-[320px] fixed top-0 left-0 z-[1000] overflow-x-hidden;
+  .menu-header {
+    @apply flex items-center h-[106px];
+    img {
+      @apply max-w-[68px]
+    }
+    span {
+      @apply absolute top-[2px] right-[14px] text-[28px] cursor-pointer text-white;
+      &:hover {
+        @apply text-white;
+      }
+    }
+  }
+
+  .nav-group {
+    @apply flex flex-col gap-[40px] justify-between p-[20px] h-[calc(100%-120px)];
+    .nav-list {
+      @apply flex flex-col text-[18px] font-[400] gap-[10px];
+      ._active {
+        @apply text-purple font-[600];
+      }
+      a:hover, a:active {
+        @apply text-purple font-[600];
+      }
+    }
+
+    .user-action-group {
+      @apply flex flex-col gap-[10px];
+      > div {
+        @apply flex items-center gap-[10px] text-white hover:text-second cursor-pointer;
+        p {
+          @apply text-white text-[16px] font-[400];
+          &:hover, &:active {
+            @apply text-purple font-[600];
+          }
+        }
+      }
+      button {
+        @apply flex justify-center items-center gap-[12px] p-[12px_20px] lg:p-[14px_30px] rounded-[20px] bg-purple font-[400] whitespace-nowrap;
+        &:hover {
+          @apply font-[600];
+        }
+      }
+    }
+  }
+}
