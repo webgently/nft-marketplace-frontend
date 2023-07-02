@@ -15,7 +15,7 @@ const heroAmount = [
   { count: '240k+', title: 'Artists' }
 ];
 
-const trending = [
+const trendings = [
   {
     art: './assets/images/art1.png',
     creator: {
@@ -43,6 +43,21 @@ const trending = [
     title: 'Disco Machines',
     arts: ['./assets/images/art8.png', './assets/images/art4.png', '']
   }
+];
+
+const creators = [
+  { avatar: './assets/images/creator1.png', name: 'Keepitreal', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator2.png', name: 'DigiLab', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator3.png', name: 'GravityOne', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator1.png', name: 'Juanie', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator2.png', name: 'BlueWhale', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator3.png', name: 'Mr Fox', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator1.png', name: 'Shroomie', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator2.png', name: 'Robotica', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator3.png', name: 'RustyRobot', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator1.png', name: 'Animakid', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator2.png', name: 'Dotgu', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator3.png', name: 'Ghiblier', price: 34.53, currency: 'ETH' }
 ];
 
 const Home = () => {
@@ -129,7 +144,7 @@ const Home = () => {
             }}
             className="mySwiper trending-collections"
           >
-            {trending.map((item: any, ind: number) => {
+            {trendings.map((item: any, ind: number) => {
               return (
                 <SwiperSlide className="treding-item" key={'treding' + ind}>
                   <img src={item.art} alt={'treding' + ind} />
@@ -153,6 +168,45 @@ const Home = () => {
               );
             })}
           </Swiper>
+        </div>
+      </section>
+      <section className="creator-section">
+        <div>
+          <div className="creator-description">
+            <div>
+              <h3>Top creators</h3>
+              <p>Checkout Top Rated Creators on the NFT Marketplace</p>
+            </div>
+            <button className="hidden sm:flex">
+              <IconMenu icon="Rocket" size={20} />
+              View Rankings
+            </button>
+          </div>
+          <div className="creator-collections">
+            {creators.map((item: any, ind: number) => {
+              return (
+                <div key={'creator' + ind} className="creator-item">
+                  <span>{ind + 1}</span>
+                  <div className="creator-avatar">
+                    <img src={item.avatar} alt={'creator' + ind} />
+                  </div>
+                  <div className="creator-detail">
+                    <p>{item.name}</p>
+                    <span>
+                      <span className="text-third">Total Sales:</span>
+                      <span>
+                        {item.price.toFixed(2)} {item.currency}
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <button className="flex sm:hidden">
+            <IconMenu icon="Rocket" size={20} />
+            View Rankings
+          </button>
         </div>
       </section>
     </Layouts>

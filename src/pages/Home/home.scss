@@ -58,7 +58,7 @@
       }
     }
     .trending-collections {
-      @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[30px];
+      @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[20px] sm:gap-[30px];
       .treding-item {
         @apply flex flex-col gap-[15px];
         img {
@@ -83,6 +83,63 @@
           span {
             @apply text-[14px] xs:text-[16px] font-[400];
           }
+        }
+      }
+    }
+  }
+}
+
+.creator-section {
+  @apply flex justify-center w-full py-[40px] md:py-[80px] px-[20px] xs:px-[4vw];
+  > div {
+    @apply flex flex-col gap-[40px] md:gap-[60px] w-full max-w-[1440px];
+    .creator-description {
+      @apply flex justify-between gap-[100px] items-end;
+      > div {
+        @apply flex flex-col gap-[10px];
+        p {
+          @apply text-[14px] sm:text-[16px] md:text-[18px] xl:text-[22px] font-[400];
+        }
+      }
+    }
+    .creator-collections {
+      @apply grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[20px] sm:gap-[30px];
+      .creator-item {
+        @apply flex flex-row lg:flex-col gap-[20px] items-center bg-second p-[20px] rounded-[20px] relative;
+        > span {
+          font-family: SpaceMono;
+          @apply flex justify-center items-center absolute top-[12px] sm:top-[20px] left-[12px] sm:left-[20px]
+          bg-primary rounded-full w-[25px] sm:w-[30px] h-[25px] sm:h-[30px]
+          text-third z-[1];
+        }
+        .creator-avatar {
+          @apply relative;
+          img {
+            @apply max-w-[60px] xs:max-w-[80px] sm:max-w-[120px] rounded-full;
+          }
+        }
+        .creator-detail {
+          @apply flex flex-col gap-[10px];
+          p {
+            @apply text-[16px] 2xs:text-[18px] xs:text-[22px] font-[600] text-left lg:text-center;
+          }
+
+          span {
+            @apply flex flex-col 2xs:flex-row gap-[4px] text-[14px] xs:text-[16px] font-[400] text-left lg:text-center;
+          }
+        }
+      }
+    }
+    button {
+      @apply justify-center gap-[12px] items-center text-white text-[16px] font-[600]
+      border-[2px] border-purple rounded-[20px] p-[18px_50px] min-w-[250px] whitespace-nowrap;
+      > div {
+        @apply text-purple;
+      }
+      &:hover{
+        @apply bg-purple text-white;
+        > div {
+          @apply text-white;
         }
       }
     }
