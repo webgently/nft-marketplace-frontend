@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import IconMenu from '../../../../components/Icons';
-import UserImg from '../../../../assets/images/user.png';
+import CreatorImg from '../../../../assets/images/creator2.png';
 import './menu.scss';
 
 const profileList = [
@@ -49,7 +49,7 @@ const Menu = ({ open, setOpen, navList }: any) => {
           <menu>
             <div className="menu-header">
               <div className="flex items-center gap-[20px] p-[20px]">
-                <img src={UserImg} alt="logo" className="user" />
+                <img src={CreatorImg} alt="logo" className="user" />
                 <div className="text-white text-[16px]">
                   <p className="font-[400]">Hello,</p>
                   <p className="font-[700]">DigiLab</p>
