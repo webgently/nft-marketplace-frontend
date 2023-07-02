@@ -1,5 +1,5 @@
 footer {
-  @apply flex flex-col items-center bg-second border-t-[1px] border-third px-[20px] xl:px-[30px] 2xl:px-[40px] py-[40px] w-full;
+  @apply flex flex-col items-center bg-second border-t-[1px] border-third px-[20px] xs:px-[4vw] py-[40px] w-full;
   .footer-top {
     @apply flex flex-col md:flex-row justify-between gap-[40px] 2xl:gap-[100px] xs:px-[10px] md:px-[30px] w-full max-w-[1440px];
     h2 {
