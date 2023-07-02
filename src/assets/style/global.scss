@@ -49,7 +49,11 @@ body {
 }
 
 h1 {
-  @apply text-[24px] xs:text-[28px] sm:text-[38px] md:text-[48px] xl:text-[58px] 2xl:text-[68px] font-[600];
+  @apply text-[26px] xs:text-[28px] sm:text-[38px] md:text-[48px] xl:text-[58px] 2xl:text-[68px] font-[600];
+}
+
+h3 {
+  @apply text-[20px] md:text-[26px] xl:text-[32px] 2xl:text-[38px] font-[600];
 }
 
 .MuiList-root {
