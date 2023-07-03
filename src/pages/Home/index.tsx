@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper';
 import Layouts from '../../components/Layouts';
 import NftCard from '../../components/NftCard';
+import Creator from '../../components/Creator';
 import HeroImg from '../../assets/images/hero.png';
 import CreatorImg from '../../assets/images/creator2.png';
 import IconMenu from '../../components/Icons';
@@ -47,18 +48,18 @@ const trendings = [
 ];
 
 const creators = [
-  { avatar: './assets/images/creator1.png', name: 'Keepitreal', price: 34.53, currency: 'ETH' },
-  { avatar: './assets/images/creator2.png', name: 'DigiLab', price: 34.53, currency: 'ETH' },
-  { avatar: './assets/images/creator3.png', name: 'GravityOne', price: 34.53, currency: 'ETH' },
-  { avatar: './assets/images/creator1.png', name: 'Juanie', price: 34.53, currency: 'ETH' },
-  { avatar: './assets/images/creator2.png', name: 'BlueWhale', price: 34.53, currency: 'ETH' },
-  { avatar: './assets/images/creator3.png', name: 'Mr Fox', price: 34.53, currency: 'ETH' },
-  { avatar: './assets/images/creator1.png', name: 'Shroomie', price: 34.53, currency: 'ETH' },
-  { avatar: './assets/images/creator2.png', name: 'Robotica', price: 34.53, currency: 'ETH' },
-  { avatar: './assets/images/creator3.png', name: 'RustyRobot', price: 34.53, currency: 'ETH' },
-  { avatar: './assets/images/creator1.png', name: 'Animakid', price: 34.53, currency: 'ETH' },
-  { avatar: './assets/images/creator2.png', name: 'Dotgu', price: 34.53, currency: 'ETH' },
-  { avatar: './assets/images/creator3.png', name: 'Ghiblier', price: 34.53, currency: 'ETH' }
+  { avatar: './assets/images/creator1.png', author: 'Keepitreal', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator2.png', author: 'DigiLab', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator3.png', author: 'GravityOne', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator1.png', author: 'Juanie', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator2.png', author: 'BlueWhale', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator3.png', author: 'Mr Fox', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator1.png', author: 'Shroomie', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator2.png', author: 'Robotica', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator3.png', author: 'RustyRobot', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator1.png', author: 'Animakid', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator2.png', author: 'Dotgu', price: 34.53, currency: 'ETH' },
+  { avatar: './assets/images/creator3.png', author: 'Ghiblier', price: 34.53, currency: 'ETH' }
 ];
 
 const browses = [
@@ -110,6 +111,7 @@ const nfts = [
     bidCurrency: 'wETH'
   }
 ];
+
 const Home = () => {
   return (
     <Layouts>
@@ -235,21 +237,14 @@ const Home = () => {
           <div className="creator-collections">
             {creators.map((item: any, ind: number) => {
               return (
-                <div key={'creator' + ind} className="creator-item">
-                  <span>{ind + 1}</span>
-                  <div className="creator-avatar">
-                    <img src={item.avatar} alt={'creator' + ind} />
-                  </div>
-                  <div className="creator-detail">
-                    <p>{item.name}</p>
-                    <span>
-                      <span className="text-third">Total Sales:</span>
-                      <span>
-                        {item.price.toFixed(2)} {item.currency}
-                      </span>
-                    </span>
-                  </div>
-                </div>
+                <Creator
+                  key={'creator' + ind}
+                  ind={ind}
+                  avatar={item.avatar}
+                  author={item.author}
+                  price={item.price}
+                  currency={item.currency}
+                ></Creator>
               );
             })}
           </div>
