@@ -1,5 +1,11 @@
-.hero-section {
+section {
   @apply flex justify-center w-full py-[40px] md:py-[80px] px-[20px] xs:px-[4vw];
+  > div {
+    @apply flex flex-col gap-[40px] md:gap-[60px] w-full max-w-[1440px];
+  }
+}
+
+.hero-section {
   > div {
     @apply flex flex-col md:flex-row gap-[20px] sm:gap-[30px] lg:gap-[50px] max-w-[1440px];
     .hero-detail {
@@ -42,41 +48,38 @@
 }
 
 .trending-section {
-  @apply flex justify-center w-full py-[40px] md:py-[80px] px-[20px] xs:px-[4vw];
-  > div {
-    @apply flex flex-col gap-[40px] md:gap-[60px] w-full max-w-[1440px];
-    .trending-description {
-      @apply flex flex-col gap-[10px];
-      p {
-        @apply text-[14px] sm:text-[16px] md:text-[18px] xl:text-[22px] font-[400];
-      }
+  .trending-description {
+    @apply flex flex-col gap-[10px];
+    p {
+      @apply text-[14px] sm:text-[16px] md:text-[18px] xl:text-[22px] font-[400];
     }
-    .trending-collections {
-      @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[20px] sm:gap-[30px];
-      .treding-item {
-        @apply flex flex-col gap-[15px];
-        img {
-          @apply rounded-[20px];
+  }
+
+  .trending-collections {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[20px] sm:gap-[30px];
+    .treding-item {
+      @apply flex flex-col gap-[15px];
+      img {
+        @apply rounded-[20px];
+      }
+
+      .sub-collections {
+        @apply grid grid-cols-3 gap-[15px];
+        span {
+          font-family: SpaceMono;
+          @apply flex justify-center items-center bg-purple rounded-[20px] w-full h-full
+          text-[12px] sm:text-[14px] md:text-[16px] xl:text-[18px] 2xl:text-[22px] font-[700];
+        }
+      }
+
+      .collection-description {
+        @apply flex flex-col gap-[10px];
+        p {
+          @apply text-[16px] 2xs:text-[18px] xs:text-[22px] font-[600];
         }
 
-        .sub-collections {
-          @apply grid grid-cols-3 gap-[15px];
-          span {
-            font-family: SpaceMono;
-            @apply flex justify-center items-center bg-purple rounded-[20px] w-full h-full
-            text-[12px] sm:text-[14px] md:text-[16px] xl:text-[18px] 2xl:text-[22px] font-[700];
-          }
-        }
-
-        .collection-description {
-          @apply flex flex-col gap-[10px];
-          p {
-            @apply text-[16px] 2xs:text-[18px] xs:text-[22px] font-[600];
-          }
-
-          span {
-            @apply text-[14px] xs:text-[16px] font-[400];
-          }
+        span {
+          @apply text-[14px] xs:text-[16px] font-[400];
         }
       }
     }
@@ -84,52 +87,44 @@
 }
 
 .creator-section {
-  @apply flex justify-center w-full py-[40px] md:py-[80px] px-[20px] xs:px-[4vw];
-  > div {
-    @apply flex flex-col gap-[40px] md:gap-[60px] w-full max-w-[1440px];
-    .creator-description {
-      @apply flex justify-between gap-[100px] items-end;
-      > div {
-        @apply flex flex-col gap-[10px];
-        p {
-          @apply text-[14px] sm:text-[16px] md:text-[18px] xl:text-[22px] font-[400];
-        }
+  .creator-description {
+    @apply flex justify-between gap-[100px] items-end;
+    > div {
+      @apply flex flex-col gap-[10px];
+      p {
+        @apply text-[14px] sm:text-[16px] md:text-[18px] xl:text-[22px] font-[400];
       }
     }
-    .creator-collections {
-      @apply grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[20px] sm:gap-[30px];
-    }
+  }
+  .creator-collections {
+    @apply grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[20px] sm:gap-[30px];
   }
 }
 
 .browse-section {
-  @apply flex justify-center w-full py-[40px] md:py-[80px] px-[20px] xs:px-[4vw];
-  > div {
-    @apply flex flex-col gap-[40px] md:gap-[60px] w-full max-w-[1440px];
-    .browse-description {
+  .browse-description {
 
-    }
-    .browse-collections {
-      @apply grid 2xs:grid-cols-2 lg:grid-cols-4 gap-[20px] sm:gap-[30px];
-    }
+  }
+  .browse-collections {
+    @apply grid 2xs:grid-cols-2 lg:grid-cols-4 gap-[20px] sm:gap-[30px];
   }
 }
 
 .nft-section {
-  @apply flex justify-center w-full py-[40px] md:py-[80px] px-[20px] xs:px-[4vw];
-  > div {
-    @apply flex flex-col gap-[40px] md:gap-[60px] w-full max-w-[1440px];
-    .nft-description {
-      @apply flex justify-between gap-[100px] items-end;
-      > div {
-        @apply flex flex-col gap-[10px];
-        p {
-          @apply text-[14px] sm:text-[16px] md:text-[18px] xl:text-[22px] font-[400];
-        }
+  .nft-description {
+    @apply flex justify-between gap-[100px] items-end;
+    > div {
+      @apply flex flex-col gap-[10px];
+      p {
+        @apply text-[14px] sm:text-[16px] md:text-[18px] xl:text-[22px] font-[400];
       }
     }
-    .nft-collections {
-      @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[20px] sm:gap-[30px];
-    }
   }
+  .nft-collections {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[20px] sm:gap-[30px];
+  }
+}
+
+.special-section {
+
 }

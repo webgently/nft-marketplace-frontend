@@ -303,6 +303,7 @@ const Home = () => {
           </button>
         </div>
       </section>
+      <section className="special-section"></section>
     </Layouts>
   );
 };
