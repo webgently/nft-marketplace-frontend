@@ -305,6 +305,7 @@ const Home = () => {
             {nfts.map((item: any, ind: number) => {
               return (
                 <NftCard
+                  color="bg-second"
                   key={'nft' + ind}
                   ind={ind}
                   art={item.art}
