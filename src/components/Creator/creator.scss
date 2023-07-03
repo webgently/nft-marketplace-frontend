@@ -1,0 +1,26 @@
+.creator {
+  @apply flex flex-row lg:flex-col gap-[20px] items-center bg-second p-[20px] rounded-[20px] relative;
+  > span {
+    font-family: SpaceMono;
+    @apply flex justify-center items-center absolute top-[12px] sm:top-[20px] left-[12px] sm:left-[20px]
+    bg-primary rounded-full w-[25px] sm:w-[30px] h-[25px] sm:h-[30px]
+    text-third z-[1];
+  }
+  .creator-avatar {
+    @apply relative;
+    img {
+      @apply max-w-[60px] xs:max-w-[80px] sm:max-w-[120px] rounded-full;
+    }
+  }
+  .creator-detail {
+    @apply flex flex-col gap-[10px];
+    p {
+      @apply text-[16px] 2xs:text-[18px] xs:text-[22px] font-[600] text-left lg:text-center;
+    }
+
+    span {
+      font-family: SpaceMono;
+      @apply flex flex-col 2xs:flex-row gap-[4px] text-[14px] xs:text-[16px] font-[400] text-left lg:text-center;
+    }
+  }
+}
