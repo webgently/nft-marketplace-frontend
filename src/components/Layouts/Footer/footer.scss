@@ -41,9 +41,6 @@ footer {
           button {
             @apply flex justify-center items-center gap-[12px] w-full md:w-[40%] px-[10px] bg-purple
             border-[1px] border-white rounded-[20px] text-[12px] 3xs:text-[14px] 2xs:text-[16px] font-[400] whitespace-nowrap;
-            &:hover {
-              @apply font-[600];
-            }
           }
         }
       }
