@@ -5,6 +5,7 @@ import Layouts from '../../components/Layouts';
 import NftCard from '../../components/NftCard';
 import Creator from '../../components/Creator';
 import Browse from '../../components/Browse';
+import Works from '../../components/Works';
 import HeroImg from '../../assets/images/hero.png';
 import CreatorImg from '../../assets/images/creator1.png';
 import IconMenu from '../../components/Icons';
@@ -110,6 +111,26 @@ const nfts = [
     currency: 'ETH',
     highestBid: 0.33,
     bidCurrency: 'wETH'
+  }
+];
+
+const works = [
+  {
+    icon: './assets/images/wallet.png',
+    title: 'Setup Your wallet',
+    description:
+      'Set up your wallet of choice. Connect it to the Animarket by clicking the wallet icon in the top right corner.'
+  },
+  {
+    icon: './assets/images/collection.png',
+    title: 'Create Collection',
+    description: 'Upload your work and setup your collection. Add a description, social links and floor price.'
+  },
+  {
+    icon: './assets/images/earning.png',
+    title: 'Start Earning',
+    description:
+      'Choose between auctions and fixed-price listings. Start earning by selling your NFTs or trading others.'
   }
 ];
 
@@ -342,6 +363,27 @@ const Home = () => {
                 See NFT
               </button>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="how-it-works">
+        <div>
+          <div className="work-description">
+            <h3>How it works</h3>
+            <p>Find out how to get started</p>
+          </div>
+          <div className="work-collections">
+            {works.map((item: any, ind: number) => {
+              return (
+                <Works
+                  key={'browse' + ind}
+                  ind={ind}
+                  icon={item.icon}
+                  title={item.title}
+                  description={item.description}
+                />
+              );
+            })}
           </div>
         </div>
       </section>

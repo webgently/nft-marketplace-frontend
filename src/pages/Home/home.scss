@@ -171,7 +171,7 @@ section {
             @apply text-purple;
           }
           &:hover {
-            @apply bg-purple text-white;
+            @apply bg-second text-white;
             > div {
               @apply text-white;
             }
@@ -179,5 +179,11 @@ section {
         }
       }
     }
+  }
+}
+
+.how-it-works {
+  .work-collections {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[20px] sm:gap-[30px];
   }
 }
