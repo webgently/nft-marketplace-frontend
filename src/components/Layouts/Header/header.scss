@@ -1,7 +1,7 @@
 header {
   @apply flex justify-between gap-[20px] fixed w-full py-[20px] px-[14px] xs:px-[20px] sm:px-[30px] md:px-[20px] lg:px-[40px] xl:px-[50px] z-[999];
   .logo-container {
-    @apply flex items-center gap-[12px];
+    @apply flex items-center gap-[12px] cursor-pointer;
     h2 {
       font-family: SpaceMono;
       @apply text-[14px] 3xs:text-[16px] 2xs:text-[18px] xs:text-[22px] font-[700];

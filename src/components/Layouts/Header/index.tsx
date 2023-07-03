@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import IconMenu from '../../Icons';
 import Menu from './Menu';
 import { menuLists } from './list.config';
@@ -8,6 +8,7 @@ import './header.scss';
 const Header = () => {
   /* common variable */
   const location = useLocation();
+  const navigate = useNavigate();
   const [scrollEvent, setScrollEvent] = React.useState(false);
 
   const [mobile, setMobile] = React.useState(false);
@@ -44,7 +45,7 @@ const Header = () => {
   return (
     <>
       <header className={scrollEvent ? 'header-container' : ''}>
-        <div className="logo-container">
+        <div className="logo-container" onClick={() => navigate('/')}>
           <IconMenu icon="Logo" size={32} className="text-purple" />
           <h2>NFT Marketplace</h2>
         </div>
