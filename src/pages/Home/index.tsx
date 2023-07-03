@@ -4,6 +4,7 @@ import { Autoplay, Pagination } from 'swiper';
 import Layouts from '../../components/Layouts';
 import NftCard from '../../components/NftCard';
 import Creator from '../../components/Creator';
+import Browse from '../../components/Browse';
 import HeroImg from '../../assets/images/hero.png';
 import CreatorImg from '../../assets/images/creator2.png';
 import IconMenu from '../../components/Icons';
@@ -79,7 +80,7 @@ const nfts = [
     name: 'Distant Galaxy',
     creator: {
       avatar: './assets/images/creator1.png',
-      name: 'MrFox'
+      author: 'MrFox'
     },
     price: 1.63,
     currency: 'ETH',
@@ -91,7 +92,7 @@ const nfts = [
     name: 'Life On Edena',
     creator: {
       avatar: './assets/images/creator2.png',
-      name: 'DigiLab'
+      author: 'DigiLab'
     },
     price: 1.63,
     currency: 'ETH',
@@ -103,7 +104,7 @@ const nfts = [
     name: 'AstroFiction',
     creator: {
       avatar: './assets/images/creator3.png',
-      name: 'BlueWhale'
+      author: 'BlueWhale'
     },
     price: 1.63,
     currency: 'ETH',
@@ -261,18 +262,7 @@ const Home = () => {
           </div>
           <div className="browse-collections">
             {browses.map((item: any, ind: number) => {
-              return (
-                <div key={'browse' + ind} className="browse-item">
-                  <div className="browse-image-container">
-                    <div className="overlay" />
-                    <IconMenu icon={item.icon} size={100} className="icon" />
-                    <img src={item.art} width="100%" alt={'browse' + ind} />
-                  </div>
-                  <div className="browse-title-container">
-                    <p>{item.name}</p>
-                  </div>
-                </div>
-              );
+              return <Browse key={'browse' + ind} ind={ind} icon={item.icon} art={item.art} name={item.name} />;
             })}
           </div>
         </div>
@@ -298,7 +288,7 @@ const Home = () => {
                   art={item.art}
                   name={item.name}
                   avatar={item.creator.avatar}
-                  author={item.creator.name}
+                  author={item.creator.author}
                   price={item.price}
                   currency={item.currency}
                   highestBid={item.highestBid}

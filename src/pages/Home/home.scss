@@ -111,29 +111,6 @@
     }
     .browse-collections {
       @apply grid 2xs:grid-cols-2 lg:grid-cols-4 gap-[20px] sm:gap-[30px];
-      .browse-item {
-        @apply rounded-[20px];
-        .browse-image-container {
-          @apply flex justify-center items-center relative;
-          .overlay {
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            @apply absolute top-0 right-0 bottom-0 left-0 z-0 rounded-t-[20px];
-          }
-          .icon {
-            @apply absolute z-[1];
-          }
-          img {
-            @apply w-full rounded-t-[20px];
-          }
-        }
-        .browse-title-container {
-          @apply bg-second rounded-b-[20px] p-[14px_14px] xs:p-[14px_20px] sm:p-[20px_30px];
-          p {
-            @apply text-[14px] sm:text-[18px] xl:text-[22px] font-[600];
-          }
-        }
-      }
     }
   }
 }
