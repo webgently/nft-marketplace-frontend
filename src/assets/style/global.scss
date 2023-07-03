@@ -56,24 +56,25 @@ h3 {
   @apply text-[20px] md:text-[26px] xl:text-[32px] 2xl:text-[38px] font-[600];
 }
 
-.MuiList-root {
-  padding: unset !important;
+.outline-btn {
+  @apply justify-center gap-[12px] items-center text-white text-[16px] font-[600]
+  border-[2px] border-purple rounded-[20px] py-[14px] sm:py-[18px] w-full whitespace-nowrap;
+  > div {
+    @apply text-purple;
+  }
+  &:hover{
+    @apply bg-purple text-white;
+    > div {
+      @apply text-white;
+    }
+  }
 }
 
-.default-input {
-  outline: none;
-  border-radius: 5px;
-  background-color: unset;
-
-  // input number increase hide
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+.primary-btn {
+  @apply justify-center items-center gap-[12px] py-[14px] sm:py-[18px] rounded-[20px] bg-purple font-[400] whitespace-nowrap;
+  &:hover {
+    @apply font-[600];
   }
-
-  /* Firefox */
-  -moz-appearance: textfield;
 }
 
 .overflow-ellipsis {
