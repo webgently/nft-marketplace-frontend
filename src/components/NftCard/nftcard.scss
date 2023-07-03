@@ -1,7 +1,7 @@
 .nft-card {
   @apply flex flex-col rounded-t-[20px];
   .nft-detail {
-    @apply flex flex-col gap-[25px] p-[14px_14px] xs:p-[14px_20px] sm:p-[20px_30px] bg-second rounded-b-[20px];
+    @apply flex flex-col gap-[25px] p-[14px_14px] xs:p-[14px_20px] sm:p-[20px_30px] rounded-b-[20px];
     p {
       @apply text-[16px] 2xs:text-[18px] xs:text-[22px] font-[600];
     }

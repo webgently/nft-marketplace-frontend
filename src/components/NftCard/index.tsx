@@ -1,11 +1,11 @@
 import React from 'react';
 import './nftcard.scss';
 
-const NftCard = ({ ind, art, name, avatar, author, price, currency, highestBid, bidCurrency }: any) => {
+const NftCard = ({ color, ind, art, name, avatar, author, price, currency, highestBid, bidCurrency }: any) => {
   return (
     <div className="nft-card">
       <img src={art} alt={'nft' + ind} />
-      <div className="nft-detail">
+      <div className={`nft-detail ${color}`}>
         <div className="creator-detail">
           <p>{name}</p>
           <div className="flex items-center gap-[12px]">
