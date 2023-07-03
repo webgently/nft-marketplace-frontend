@@ -1,0 +1,65 @@
+.marketplace-section {
+  @apply relative;
+  .marketplace-top {
+    @apply flex justify-center w-full my-[40px] md:my-[80px] px-[20px] xs:px-[4vw];
+    > div {
+      @apply flex flex-col gap-[30px] w-full max-w-[1440px];
+      .marketplace-title {
+        @apply flex flex-col gap-[10px];
+        p {
+          @apply text-[16px] xs:text-[18px] md:text-[22px] font-[400];
+        }
+      }
+      .marketplace-search {
+        @apply flex items-center gap-[20px] border-[1px] border-second rounded-[20px] p-[12px_20px];
+        input {
+          @apply border-none outline-none w-full bg-transparent
+          text-[16px] text-third;
+        }
+      }
+    }
+  }
+  .marketplace-bottom {
+    @apply flex flex-col items-center w-full;
+    .marketplace-tab {
+      @apply flex flex-col items-center gap-[30px] w-full px-[20px] xs:px-[4vw];
+      > div {
+        @apply flex flex-col items-center gap-[30px] w-full max-w-[1440px];
+        > div {
+          @apply grid grid-cols-2 w-full;
+          .tab-item {
+            @apply flex justify-center justify-self-center py-[14px];
+            button {
+              @apply text-third text-[14px] md:text-[16px];
+              span {
+                font-family: SpaceMono;
+                @apply hidden xs:inline text-white p-[4px_10px] bg-second rounded-full;
+              }
+            }
+          }
+          ._active {
+            @apply border-b-[2px] border-third w-full;
+            button {
+              @apply text-white;
+              span {
+                @apply bg-third;
+              }
+            }
+          }
+        }
+      }
+    }
+    .marketplace-arts {
+      @apply flex flex-col items-center bg-second w-full px-[20px] xs:px-[4vw];
+      > div {
+        @apply flex flex-col items-center gap-[30px] w-full max-w-[1440px];
+        > div {
+          @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[20px] sm:gap-[30px] py-[60px] w-full;
+        }
+      }
+    }
+  }
+  .borderline {
+    @apply absolute w-full left-0 border-b-[1px] border-second;
+  }
+}
