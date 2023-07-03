@@ -1,15 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import IconMenu from '../../Icons';
 import { menuLists, socialLists } from '../Header/list.config';
 import './footer.scss';
 
 const Footer = () => {
+  /* common variable */
+  const navigate = useNavigate();
+
   return (
     <footer>
       <div className="footer-top">
         <div className="footer-steps">
-          <div className="flex gap-[12px] items-center whitespace-nowrap">
+          <div className="flex gap-[12px] items-center whitespace-nowrap cursor-pointer" onClick={() => navigate('/')}>
             <IconMenu icon="Logo" size={32} className="text-purple" />
             <h2>NFT Marketplace</h2>
           </div>
