@@ -1,0 +1,12 @@
+.work-item {
+  @apply flex flex-row xs:flex-col xs:justify-center items-center gap-[20px] bg-second rounded-[20px] p-[20px] xs:p-[30px];
+  img {
+    @apply w-[100px] xs:w-[220px] md:w-[250px];
+  }
+  p {
+    @apply text-[16px] xs:text-[18px] md:text-[20px] lg:text-[22px] font-[600] text-left xs:text-center;
+  }
+  span {
+    @apply text-[12px] md:text-[14px] lg:text-[16px] font-[400] text-left xs:text-center;
+  }
+}
