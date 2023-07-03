@@ -6,7 +6,7 @@ import NftCard from '../../components/NftCard';
 import Creator from '../../components/Creator';
 import Browse from '../../components/Browse';
 import HeroImg from '../../assets/images/hero.png';
-import CreatorImg from '../../assets/images/creator2.png';
+import CreatorImg from '../../assets/images/creator1.png';
 import IconMenu from '../../components/Icons';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -303,7 +303,48 @@ const Home = () => {
           </button>
         </div>
       </section>
-      <section className="special-section"></section>
+      <section className="special-section">
+        <div>
+          <div className="special-container">
+            <div>
+              <div className="special-detail">
+                <div className="special-author">
+                  <img src={CreatorImg} width="24px" alt="special-author" />
+                  <span>Shroomie</span>
+                </div>
+                <h2>Magic Mashrooms</h2>
+                <button className="w-full sm:w-[250px] hidden sm:flex">
+                  <IconMenu icon="Eye" size={20} />
+                  See NFT
+                </button>
+              </div>
+              <div className="special-auction">
+                <span>Auction ends in:</span>
+                <div className="spacial-time">
+                  <div>
+                    <p>59</p>
+                    <span>Hours</span>
+                  </div>
+                  <p>:</p>
+                  <div>
+                    <p>59</p>
+                    <span>Minutes</span>
+                  </div>
+                  <p>:</p>
+                  <div>
+                    <p>59</p>
+                    <span>Seconds</span>
+                  </div>
+                </div>
+              </div>
+              <button className="w-full xs:w-[260px] flex sm:hidden">
+                <IconMenu icon="Eye" size={20} />
+                See NFT
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </Layouts>
   );
 };
