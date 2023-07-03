@@ -187,3 +187,36 @@ section {
     @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[20px] sm:gap-[30px];
   }
 }
+
+.contact-section {
+  @apply pt-0 m-0 pb-[40px] sm:pb-[80px];
+  > div {
+    @apply flex flex-col md:flex-row justify-center gap-[30px] md:gap-[40px] lg:gap-[80px]
+    bg-second p-[30px] md:p-[40px] lg:p-[60px] rounded-[20px];
+    .contact-image {
+      @apply w-full md:w-[50%];
+      img {
+        @apply w-full;
+      }
+    }
+    .contact-form {
+      @apply flex flex-col justify-center gap-[20px] sm:gap-[30px] md:gap-[40px] w-full md:w-[50%];
+      p {
+        @apply text-[16px] md:text-[18px] lg:text-[22px] font-[400];
+      }
+      .contact-container {
+        @apply flex justify-between md:max-w-[500px] bg-white rounded-[20px];
+        .contact-input {
+          @apply p-[12px_16px] sm:p-[16px_20px] w-full md:w-[70%];
+          input {
+            @apply text-primary text-[16px] outline-none border-none w-full text-[12px] 3xs:text-[14px] 2xs:text-[16px];
+          }
+        }
+      }
+      button {
+        @apply justify-center items-center gap-[12px] px-[10px] bg-purple border-[1px] border-white rounded-[20px]
+        py-[12px] text-[12px] 3xs:text-[14px] 2xs:text-[16px] font-[400] whitespace-nowrap;
+      }
+    }
+  }
+}

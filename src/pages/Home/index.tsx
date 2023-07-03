@@ -8,6 +8,7 @@ import Browse from '../../components/Browse';
 import Works from '../../components/Works';
 import HeroImg from '../../assets/images/hero.png';
 import CreatorImg from '../../assets/images/creator1.png';
+import ContactImg from '../../assets/images/contact.png';
 import IconMenu from '../../components/Icons';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -384,6 +385,32 @@ const Home = () => {
                 />
               );
             })}
+          </div>
+        </div>
+      </section>
+      <section className="contact-section">
+        <div>
+          <div className="contact-image">
+            <img src={ContactImg} alt="contact" />
+          </div>
+          <div className="contact-form">
+            <div className="flex flex-col gap-[20px]">
+              <h3>Join our weekly digest</h3>
+              <p>Get exclusive promotions & updates straight to your inbox.</p>
+            </div>
+            <div className="contact-container">
+              <div className="contact-input">
+                <input type="text" placeholder="Enter your email here" />
+              </div>
+              <button className="w-full md:w-[280px] hidden md:flex">
+                <IconMenu icon="Mail" size={20} />
+                <span>Subscribe</span>
+              </button>
+            </div>
+            <button className="w-full flex md:hidden">
+              <IconMenu icon="Mail" size={20} />
+              <span>Subscribe</span>
+            </button>
           </div>
         </div>
       </section>
