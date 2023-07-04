@@ -21,7 +21,7 @@ const Footer = () => {
             <div className="social-group">
               <p>Join our community</p>
               <div className="social-list">
-                {socialLists.map((item: any, ind: number) => {
+                {socialLists.slice(1).map((item: any, ind: number) => {
                   return (
                     <Link key={item.icon + ind} to={item.link}>
                       <IconMenu icon={item.icon} size={32} className="text-third" />
