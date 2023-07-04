@@ -1,0 +1,106 @@
+.bg-nft-container {
+  background-image: url('../../assets/images/bg2.png');
+  @apply h-[400px] sm:h-[50vh] lg:h-[70vh] bg-center bg-cover relative bg-no-repeat;
+}
+
+.nft-info-section {
+  @apply my-[40px];
+  > div {
+    @apply flex flex-row justify-between md:gap-[30px] lg:gap-[50px];
+    .nft-info {
+      @apply flex flex-col gap-[30px] md:w-[55%];
+      .name {
+        @apply flex flex-col gap-[10px];
+        p {
+          @apply text-third text-[16px] xs:text-[18px] md:text-[22px] font-[400];
+        }
+      }
+      .author {
+        @apply flex flex-col gap-[10px];
+        > div {
+          @apply flex items-center gap-[12px];
+          p {
+            @apply text-white font-[500];
+          }
+        }
+        p {
+          font-family: SpaceMono;
+          @apply text-third text-[16px] xs:text-[18px] md:text-[22px] font-[700];
+        }
+      }
+      .description {
+        @apply flex flex-col gap-[10px];
+        p {
+          font-family: SpaceMono;
+          @apply text-third text-[16px] xs:text-[18px] md:text-[22px] font-[700];
+        }
+        > div {
+          @apply text-white text-[16px] xs:text-[18px] md:text-[22px] font-[400];
+        }
+      }
+      .details {
+        @apply flex flex-col gap-[10px];
+        > p {
+          font-family: SpaceMono;
+          @apply text-third text-[16px] xs:text-[18px] md:text-[22px] font-[700];
+        }
+        > div {
+          @apply flex flex-col gap-[10px];
+          > div {
+            @apply flex items-center gap-[4px];
+            p {
+              @apply text-white text-[16px] xs:text-[18px] md:text-[22px] font-[400];
+            }
+          }
+        }
+      }
+      .tags {
+        @apply flex flex-col gap-[10px];
+        p {
+          font-family: SpaceMono;
+          @apply text-third text-[16px] xs:text-[18px] md:text-[22px] font-[700];
+        }
+        .tag-group {
+          @apply flex flex-col sm:flex-row gap-[10px] md:gap-[20px];
+          > div {
+            @apply bg-second rounded-[20px] p-[10px_30px] w-min;
+          }
+        }
+      }
+    }
+    .nft-auction {
+      font-family: SpaceMono;
+      @apply flex-col items-center sm:items-start gap-[20px] w-full xs:w-min bg-second/[0.5] rounded-[20px] p-[14px] xs:p-[20px] md:p-[30px] h-min;
+      p {
+        @apply text-[18px] 2xs:text-[24px] xs:text-[28px] sm:text-[32px] md:text-[38px] font-[700];
+      }
+      span {
+        @apply text-[10px] xs:text-[12px] font-[400];
+      }
+      .spacial-time {
+        @apply flex gap-[10px];
+        > div {
+          @apply flex flex-col items-center;
+        }
+        > p {
+          @apply flex items-start;
+        }
+      }
+    }
+  }
+}
+
+.nft-more-section {
+  .nft-description {
+    @apply flex justify-between gap-[100px] items-end;
+    > div {
+      @apply flex flex-col gap-[10px];
+      p {
+        @apply text-[14px] sm:text-[16px] md:text-[18px] xl:text-[22px] font-[400];
+      }
+    }
+  }
+  .nft-collections {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[20px] sm:gap-[30px];
+  }
+}
