@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import IconMenu from '../../Icons';
-import { menuLists, socialLists } from '../Header/list.config';
+import { menuLists, socialLists } from '../list.config';
 import './footer.scss';
 
 const Footer = () => {

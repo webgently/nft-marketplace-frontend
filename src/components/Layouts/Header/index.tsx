@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import IconMenu from '../../Icons';
 import Menu from './Menu';
-import { menuLists } from './list.config';
+import { menuLists } from '../list.config';
 import './header.scss';
 
 const Header = () => {
