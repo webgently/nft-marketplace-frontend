@@ -112,12 +112,6 @@ section {
 .nft-section {
   .nft-description {
     @apply flex justify-between gap-[100px] items-end;
-    > div {
-      @apply flex flex-col gap-[10px];
-      p {
-        @apply text-[14px] sm:text-[16px] md:text-[18px] xl:text-[22px] font-[400];
-      }
-    }
   }
   .nft-collections {
     @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[20px] sm:gap-[30px];
