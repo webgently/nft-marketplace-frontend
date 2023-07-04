@@ -14,10 +14,10 @@ root.render(
       <Routers />
       <ScrollToTop
         smooth
-        color="#A259FF"
+        color="white"
         width="24"
         height="24"
-        className="rounded-full flex justify-center items-center w-[50px] h-[50px]"
+        className="bg-purple rounded-full flex justify-center items-center w-[50px] h-[50px]"
       />
     </Provider>
   </React.StrictMode>
