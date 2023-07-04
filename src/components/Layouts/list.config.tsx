@@ -15,6 +15,10 @@ const menuLists = [
 
 const socialLists = [
   {
+    icon: 'Website',
+    link: '/'
+  },
+  {
     icon: 'Discord',
     link: '/'
   },
