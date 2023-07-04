@@ -1,0 +1,101 @@
+.bg-profile-container {
+  background-image: url('../../assets/images/bg1.png');
+  @apply flex justify-center w-full h-[320px] bg-center bg-cover relative bg-no-repeat px-[20px] xs:px-[4vw] relative;
+  .avatar-container {
+    @apply flex justify-center xs:justify-start absolute -bottom-[50px] sm:-bottom-[60px] w-full max-w-[1440px];
+    img {
+      @apply w-[100px] sm:w-max border-[2px] border-primary rounded-[20px];
+    }
+  }
+}
+
+.profile-container {
+  @apply mb-0 pb-[40px];
+  > div {
+    @apply flex flex-row gap-[50px] justify-between;
+    .profile {
+      @apply flex flex-col gap-[30px] w-full pt-[30px] md:pt-0;
+      .hero-amount {
+        @apply grid grid-cols-3 gap-[10px] xs:gap-[40px] sm:gap-[60px] md:gap-[80px] w-full xs:w-max;
+        p {
+          font-family: SpaceMono;
+          @apply text-[16px] xs:text-[18px] md:text-[22px] font-[700] text-center xs:text-left;
+        }
+        span {
+          @apply text-[12px] xs:text-[14px] md:text-[16px] font-[400] text-center xs:text-left;
+        }
+      }
+      .profile-bio {
+        @apply flex flex-col gap-[10px];
+        p {
+          font-family: SpaceMono;
+          @apply text-third text-[16px] xs:text-[18px] md:text-[22px] font-[700];
+        }
+        > div {
+          @apply text-white text-[16px] xs:text-[18px] md:text-[22px] font-[400];
+        }
+      }
+      .profile-socials {
+        @apply flex flex-col gap-[10px];
+        > p {
+          font-family: SpaceMono;
+          @apply text-third text-[16px] xs:text-[18px] md:text-[22px] font-[700];
+        }
+        .social-list {
+          @apply flex gap-[10px];
+        }
+      }
+    }
+    .action {
+      @apply flex-col sm:flex-row gap-[20px] h-min;
+    }
+  }
+}
+
+.nft-collections {
+  @apply relative;
+  .borderline {
+    @apply absolute w-full left-0 border-b-[1px] border-second;
+  }
+  .collection-container {
+    @apply flex flex-col items-center w-full;
+    .collection-tab {
+      @apply flex flex-col items-center gap-[30px] w-full px-[20px] xs:px-[4vw];
+      > div {
+        @apply flex flex-col items-center gap-[30px] w-full max-w-[1440px];
+        > div {
+          @apply grid grid-cols-3 w-full;
+          .tab-item {
+            @apply flex justify-center justify-self-center py-[14px];
+            button {
+              @apply text-third text-[14px] md:text-[16px];
+              span {
+                font-family: SpaceMono;
+                @apply hidden xs:inline text-white p-[4px_10px] bg-second rounded-full;
+              }
+            }
+          }
+          ._active {
+            @apply border-b-[2px] border-third w-full;
+            button {
+              @apply text-white;
+              span {
+                @apply bg-third;
+              }
+            }
+          }
+        }
+      }
+    }
+    .collection-arts {
+      @apply flex flex-col items-center bg-second w-full px-[20px] xs:px-[4vw];
+      > div {
+        @apply flex flex-col items-center gap-[30px] w-full max-w-[1440px];
+        > div {
+          @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[20px] sm:gap-[30px] py-[60px] w-full;
+        }
+      }
+    }
+  }
+}
+
