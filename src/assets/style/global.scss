@@ -12,31 +12,47 @@
   src: url('../fonts/SpaceMono-Regular.ttf');
 }
 
-* {
-  $scrollRound : 10px;
-  $scrollWidth : 4px;
-  $scrollHeight: 4px;
-  $scrollBG_track : #858584;
-  $scrollBG_thumb : #A259FF;
-  $scrollColor : #26384c #A259FF;
+// * {
+//   $scrollRound : 10px;
+//   $scrollWidth : 4px;
+//   $scrollHeight: 4px;
+//   $scrollBG_track : #A259FF;
+//   $scrollBG_thumb : #A259FF;
+//   $scrollColor : #26384c #A259FF;
 
-  box-sizing: border-box;
-  scrollbar-width: $scrollWidth;
-  scrollbar-color: $scrollColor;
+//   box-sizing: border-box;
+//   scrollbar-width: $scrollWidth;
+//   scrollbar-color: $scrollColor;
 
-  &::-webkit-scrollbar {
-    width: $scrollWidth;
-    height: $scrollHeight;
-  }
+//   &::-webkit-scrollbar {
+//     width: $scrollWidth;
+//     height: $scrollHeight;
+//   }
 
-  &::-webkit-scrollbar-track {
-    background: $scrollBG_track;
-  }
+//   &::-webkit-scrollbar-track {
+//     background: $scrollBG_track;
+//   }
 
-  &::-webkit-scrollbar-thumb {
-    border-radius: $scrollRound;
-    background-color: $scrollBG_thumb;
-  }
+//   &::-webkit-scrollbar-thumb {
+//     border-radius: $scrollRound;
+//     background-color: $scrollBG_thumb;
+//   }
+// }
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #A259FF;
+  border: 2px solid #A259FF;
 }
 
 html,
